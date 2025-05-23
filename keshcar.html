@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <style>
+      body{
+  width:100%;
+  height:100%;
+  background-color:gray;
+  background-image:url(editback.png);
+  background-size:100%;
+  background-repeat:repeat-x;
+  animation:goBackground 0.5s linear infinite;
+}
+
+@keyframes goBackground{
+  0%{background-position: 0px 0px;}
+  100%{background-position:2000px 0px;}
+}
+
+.car{
+  position:absolute;
+  top:70%;
+  left:300px;
+     background-repeat:repeat-x;
+  animation: topss 5s linear infinite;
+}
+@keyframes tops{
+  0%{margin-top:10px;}
+  25%{margin-top:90px;}
+  50%{margin-top:20px;}
+  75%{margin-top:40px;}
+  80%{margin-top:100px}
+}
+@keyframes topss{
+  100%{margin-left:-1000px;}
+  80%{margin-left:350px;}
+  60%{margin-left:525px;}
+  40%{margin-left:725px;}
+  20%{margin-left:1000px;}
+  0%{margin-left:1500px;}
+}
+.top{
+  margin:2px;
+  height:40px;
+  width:150px;
+  background-color:#b51010;
+  margin-left:125px;
+  border-radius: 30px 30px 0 0;
+  margin-top:10px;
+     background-repeat:repeat-x;
+  animation: tops 5s linear infinite;
+}
+
+.windows{
+  display:inline-block;
+  width:90px;
+  height:20px;
+  border:0px solid white;
+  background-color:black;
+  margin-left:20px;
+  margin-top:10px;
+}
+
+.bottom{
+  margin:2px;
+  height:70px;
+  width:320px;
+  background-color:#b51010;
+  margin-left:50px;
+  border-top-left-radius:100px;
+  border-top-right-radius:3px;
+}
+
+.wheels{
+  display:inline-block;
+  width:0px;
+  height:0px;
+  border-radius:360px;
+  border:1px solid white;
+  border-bottom:30px solid grey;
+  border-left:30px solid black;
+  border-top:30px solid grey;
+  border-right:30px solid black;
+  margin-left:90px;
+  margin-top:-30px;
+  animation:spin 0.1s linear 0s infinite;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(-360deg);}
+}
+@keyframes light{
+  10%{opacity:0.4;}
+  50%{opacity:1;}
+  90%{opacity:0.4}
+}
+
+.light{
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  width:20px;
+  height:40px;
+  background-color:#f26a02;
+  opacity:0.5;
+  margin-left:320px;
+  margin-top:20px;
+  position:absolute;
+  z-index:-1;
+   background-repeat:repeat-x;
+  animation:light 0.6s linear infinite;
+}
+
+    </style>
+    <title>
+      Car project
+    </title>
+  </head>
+  <body>
+ 
+    <div class="car">
+      <div class="top">
+        <div class="windows"></div>
+        
+      </div>
+      <div class="bottom">
+        <div class="light">
+          
+        </div>
+      </div>
+      <div class="wheels" id="left">
+        
+      </div>
+      <div class="wheels" id="right">
+        
+      </div>
+    </div>
+  </body>
+</html>
